@@ -1,11 +1,11 @@
 'use client'
-'./styles.css'
 import React, { useState } from 'react';
-import Link from 'next/link'
+import Link from 'next/link';
+import './Page.css'; // Import your CSS file
 
 export default function Page() {
-  const [posts, setPosts] = useState([]); // สร้าง state เพื่อเก็บรายการกระทู้
-  const [newPost, setNewPost] = useState({ title: '', content: '', image: null }); // สร้าง state เพื่อเก็บข้อมูลของกระทู้ใหม่
+  const [posts, setPosts] = useState([]);
+  const [newPost, setNewPost] = useState({ title: '', content: '', image: null });
 
   const handleTitleChange = (e) => {
     setNewPost({ ...newPost, title: e.target.value });
@@ -21,15 +21,12 @@ export default function Page() {
 
   const handleCreatePost = () => {
     if (newPost.title && newPost.content) {
-      // สร้างกระทู้ใหม่และเพิ่มลงในรายการกระทู้
       setPosts([...posts, newPost]);
-      // รีเซ็ตค่ากระทู้ใหม่เป็นค่าเริ่มต้น
       setNewPost({ title: '', content: '', image: null });
     }
   };
 
   const handleDeletePost = (index) => {
-    // ลบกระทู้จากรายการโดยใช้ index
     const updatedPosts = [...posts];
     updatedPosts.splice(index, 1);
     setPosts(updatedPosts);
@@ -55,7 +52,7 @@ export default function Page() {
           accept="image/png"
           onChange={handleImageChange}
         />
-        <button onClick={handleCreatePost}>Create Post</button>
+        <button className="custom-button" onClick={handleCreatePost}>Create Post</button>
       </div>
       <div>
         <h2>Posts</h2>
@@ -65,11 +62,11 @@ export default function Page() {
               <h3>{post.title}</h3>
               <p>{post.content}</p>
               {post.image && <img src={URL.createObjectURL(post.image)} alt="Post" />}
-              <button onClick={() => handleDeletePost(index)}>Delete Post</button>
+              <button className="custom-button" onClick={() => handleDeletePost(index)}>Delete Post</button>
             </li>
           ))}
           <div>
-          <Link href="/user/"> User </Link>
+            <Link href="/user/">User</Link>
           </div>
         </ul>
       </div>

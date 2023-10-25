@@ -3,7 +3,7 @@
   html {
     color-scheme: dark;
     /* เพิ่มสีพื้นหลังหรือสีของข้อความ */
-    background-color: #333; /* เปลี่ยนสีพื้นหลังเป็นเทาเข้ม */
+    background-color: #a4a4a4; /* เปลี่ยนสีพื้นหลังเป็นเทาเข้ม */
     color: #fff; /* เปลี่ยนสีข้อความเป็นขาว */
   }
 
@@ -17,7 +17,7 @@
     opacity: 0.8; /* ลดความโปร่งใสของรูปภาพ */
   }
 
-  * styles.css *
+  /* styles.css */
   .post-container {
     margin: 20px;
     padding: 20px;
@@ -28,13 +28,13 @@
 
   .post-title {
     font-size: 24px;
-    color: #333;
+    color: hsl(330, 100%, 90%);
     margin-bottom: 10px;
   }
 
   .post-content {
     font-size: 16px;
-    color: #666;
+    color: hsl(314, 77%, 64%);
     margin-bottom: 15px;
   }
 
@@ -102,4 +102,5 @@
     --bs-form-invalid-color: #ea868f;
     --bs-form-invalid-border-color: #ea868f;
   }
+
 }
