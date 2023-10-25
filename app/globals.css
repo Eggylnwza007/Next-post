@@ -17,7 +17,7 @@
     opacity: 0.8; /* ลดความโปร่งใสของรูปภาพ */
   }
 
-  /* styles.css */
+  * styles.css *
   .post-container {
     margin: 20px;
     padding: 20px;

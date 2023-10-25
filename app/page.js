@@ -5,9 +5,11 @@ import Link from 'next/link';
 export default function Page() {
   return (
     <div>
-      Hello World 
+      <h1>
+      welcome to post online 
+      </h1>
       <div>
-        <Link href="/user/"> User </Link> 
+        <Link href="/user/"> Start </Link> 
       </div>
     </div>
   );
